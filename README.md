@@ -1,12 +1,12 @@
 # Тестовое задание 3itech-frontend / interview-tasks
 
-![Описание задания](https://github.com/3itech-frontend/interview-tasks/)
+[Описание задания](https://github.com/3itech-frontend/interview-tasks/)
 
 ## 1. Верстка
 
 ### Дополнил scss правила так, чтобы представленная html разметка приобрела [нужный](https://raw.githubusercontent.com/3itech-frontend/interview-tasks/main/example.png) вид.
 
-![Результат](https://andrey-trofimov.github.io/3itech-frontend__interview-tasks/)
+[Результат](https://andrey-trofimov.github.io/3itech-frontend__interview-tasks/)
 
 ```SCSS
 .dialog-container {
