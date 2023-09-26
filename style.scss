@@ -1,0 +1,78 @@
+.dialog-container {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #777;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dialog {
+    background-color: #fff;
+    max-height: 500px;
+    max-width: 350px;
+
+    &__header {
+        background-color: #ddd;
+        display: flex;
+        flex-direction: row;
+    }
+
+    &__header-title-container {
+        width: 65%;
+    }
+
+    &__header-title {
+        white-space: nowrap;
+        overflow: hidden;
+        margin-right: 7px;
+        position: relative;
+
+        &::after {
+            content: "...";
+            position: absolute;
+            display: inline-block;
+            right: 0px;
+            background-color: #ddd;
+        }
+    }
+
+    &__header-button {
+        width: 35%;
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: row;
+        height: 320px;
+    }
+
+    &__content-block {
+        &_left {
+            width: 30%;
+            border-right: 1px solid #ccc;
+        }
+
+        &_right {
+            width: 70%;
+            overflow-y: scroll;
+        }
+    }
+
+    &__footer {
+        background-color: #ddd;
+        text-align: center;
+        word-wrap: break-word;
+    }
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    height: 500px;
+    width: 100%;
+}
