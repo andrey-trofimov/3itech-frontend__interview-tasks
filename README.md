@@ -4,7 +4,7 @@
 
 ## 1. Верстка
 
-### Дополнил scss правила так, чтобы представленная html разметка приобрела ![нужный](https://raw.githubusercontent.com/3itech-frontend/interview-tasks/main/example.png) вид.
+### Дополнил scss правила так, чтобы представленная html разметка приобрела [нужный](https://raw.githubusercontent.com/3itech-frontend/interview-tasks/main/example.png) вид.
 
 ![Результат](https://andrey-trofimov.github.io/3itech-frontend__interview-tasks/)
 
