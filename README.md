@@ -94,33 +94,16 @@
 ### Написал функцию `decode` в том же стиле, что и функция `encode` (вытянутой в цепочку). Переменная `input` равна коду, полученному после повторного кодирования выражения "i love puzzles".
 
 ```javascript
-let decode = (input) =>
-  input
-    .match(/\d+/g)
-    .concat(1)
-    .map((x) => +x / 2 - 1)
-    .reduce(
-      (newX, x, i, arr) =>
-        x < 0
-          ? newX.concat(
-              arr
-                .slice(
-                  newX.length + newX.reduce((sum, x) => sum + x.length, 0),
-                  i
-                )
-                .join("")
-            )
-          : newX,
-      []
-    )
-    .map((x) => +x)
-    .reduce(
-      (newX, _, i, arr) => (i % 2 ? newX : [...newX, arr.slice(i, i + 2)]),
-      []
-    )
-    .sort((a, b) => +a[1] - b[1])
-    .map((x) => String.fromCodePoint(x[0]))
-    .join("");
+let decode = input => input
+.match(/\d+/g)
+.concat(1)
+.map(x => +x/2 - 1)
+.reduce((newX, x, i, arr) => x < 0 ? newX.concat(arr.slice(newX.length + newX.reduce((sum, x) => sum + x.length, 0), i).join('')) : newX, [])
+.map(x => +x)
+.reduce((newX, _, i, arr) => i % 2 ? newX : [...newX, arr.slice(i, i + 2)],[])
+.sort((a, b) => +a[1] - b[1])
+.map(x => String.fromCodePoint(x[0]))
+.join('')
 ```
 
 #### `decode(decode(input))`:
